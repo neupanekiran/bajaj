@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-red: #c84b45;
+  --color-brand-red-hover: #b5403a;
+  --color-brand-dark: #0f0f11;
+  --color-brand-card: #151518;
+  --color-brand-border: #2a2a2f;
+  --color-brand-border-red: rgba(200, 75, 69, 0.3);
+}
+
+:root {
+  --bg: #09090b;
+  --fg: #ffffff;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-inter), sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.mono-heading {
+  font-family: var(--font-space-mono), monospace;
+}
+
+.pixel-logo {
+  font-family: 'Press Start 2P', monospace;
+  image-rendering: pixelated;
+}
+
+/* Base input styles overrides */
+textarea {
+  font-family: var(--font-space-mono), monospace;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2a2f;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+/* Custom ReactFlow Overrides to match Mailgoose clean dark theme */
+.react-flow__background { background: #09090b !important; }
+.react-flow__attribution { display: none !important; }
+.react-flow__controls {
+  border: 1px solid var(--color-brand-border) !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5) !important;
+  background: var(--color-brand-card) !important;
+  border-radius: 8px !important;
+  overflow: hidden;
+}
+.react-flow__controls-button {
+  background: var(--color-brand-card) !important;
+  border-color: var(--color-brand-border) !important;
+  color: #a1a1aa !important;
+}
+.react-flow__controls-button:hover {
+  background: #1f1f23 !important;
+  color: #fff !important;
+}
+.react-flow__minimap { display: none; }
