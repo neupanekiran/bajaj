@@ -59,7 +59,7 @@ export default function Home() {
     const dataArray = input.split(/[\\n,]/).map(s => s.trim()).filter(Boolean);
 
     try {
-      const res = await axios.post('http://localhost:5001/bfhl', { data: dataArray });
+      const res = await axios.post('https://kiranprasadneupane-bfhl.vercel.app/bfhl', { data: dataArray });
       setResponse(res.data);
     } catch (err: unknown) {
       if (axios.isAxiosError(err)) {
